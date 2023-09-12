@@ -438,12 +438,12 @@ def merge_chunks_serially(chunked_content_list: List[str], num_tokens: int) -> G
 
 def get_embedding(text, azure_credential, embedding_endpoint):
     try:
-        endpoint_parts = embedding_endpoint.split("/openai/deployments/")
-        base_url = endpoint_parts[0]
-        deployment_id = endpoint_parts[1].split("/embeddings")[0]
+        # endpoint_parts = embedding_endpoint.split("/openai/deployments/")
+        # base_url = endpoint_parts[0]
+        deployment_id = "text-embedding-ada-002" #endpoint_parts[1].split("/embeddings")[0]
 
         openai.api_version = '2023-05-15'
-        openai.api_base = base_url
+        openai.api_base = 'https://openaicgdemo.openai.azure.com/' #base_url
         openai.api_key = azure_credential.get_token("https://cognitiveservices.azure.com/.default").token
         openai.api_type = "azure_ad"
 

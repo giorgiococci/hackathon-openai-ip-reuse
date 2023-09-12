@@ -9,16 +9,16 @@ param environmentName string
 @description('Primary location for all resources')
 param location string
 
-param appServicePlanName string = ''
-param backendServiceName string = ''
-param resourceGroupName string = ''
+param appServicePlanName string = 'asp-hackathon-openai-ip-reuse'
+param backendServiceName string = 'db-hackathon-openai-ip-reuse'
+param resourceGroupName string = 'hackathon'
 
-param searchServiceName string = ''
-param searchServiceResourceGroupName string = ''
+param searchServiceName string = 'gptkb-5ghy4cpp5hlr2'
+param searchServiceResourceGroupName string = 'rg-cgdemoopenai'
 param searchServiceResourceGroupLocation string = location
-param searchServiceSkuName string = ''
-param searchIndexName string = 'gptkbindex'
-param searchUseSemanticSearch bool = false
+param searchServiceSkuName string = 'Standard'
+param searchIndexName string = 'hackathon-index'
+param searchUseSemanticSearch bool = true
 param searchSemanticSearchConfig string = 'default'
 param searchTopK int = 5
 param searchEnableInDomain bool = true
@@ -27,10 +27,10 @@ param searchFilenameColumn string = 'filepath'
 param searchTitleColumn string = 'title'
 param searchUrlColumn string = 'url'
 
-param openAiResourceName string = ''
-param openAiResourceGroupName string = ''
+param openAiResourceName string = 'openaicgdemo'
+param openAiResourceGroupName string = 'demo'
 param openAiResourceGroupLocation string = location
-param openAiSkuName string = ''
+param openAiSkuName string = 'Standard'
 param openAIModel string = 'turbo16k'
 param openAIModelName string = 'gpt-35-turbo-16k'
 param openAITemperature int = 0
@@ -44,8 +44,8 @@ param embeddingDeploymentName string = 'embedding'
 param embeddingModelName string = 'text-embedding-ada-002'
 
 // Used by prepdocs.py: Form recognizer
-param formRecognizerServiceName string = ''
-param formRecognizerResourceGroupName string = ''
+param formRecognizerServiceName string = 'csfr-hackathon-openai-ip-reuse'
+param formRecognizerResourceGroupName string = 'hackathon'
 param formRecognizerResourceGroupLocation string = location
 param formRecognizerSkuName string = ''
 
@@ -55,7 +55,7 @@ param authClientId string
 param authClientSecret string
 
 // Used for Cosmos DB
-param cosmosAccountName string = ''
+param cosmosAccountName string = 'db-hackathon-openai-ip-reuse'
 
 @description('Id of the user or app to assign application roles')
 param principalId string = ''

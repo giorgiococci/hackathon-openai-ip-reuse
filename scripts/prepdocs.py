@@ -172,14 +172,17 @@ if __name__ == "__main__":
         "--tenantid",
         required=False,
         help="Optional. Use this to define the Azure directory where to authenticate)",
+        default='16b3c013-d300-468d-ac64-7eda0820b6d3'
     )
     parser.add_argument(
         "--searchservice",
         help="Name of the Azure Cognitive Search service where content should be indexed (must exist already)",
+        default='gptkb-5ghy4cpp5hlr2'
     )
     parser.add_argument(
         "--index",
         help="Name of the Azure Cognitive Search index where content should be indexed (will be created if it doesn't exist)",
+        default='hackathon-index'
     )
     parser.add_argument(
         "--searchkey",
@@ -190,6 +193,7 @@ if __name__ == "__main__":
         "--formrecognizerservice",
         required=False,
         help="Optional. Name of the Azure Form Recognizer service which will be used to extract text, tables and layout from the documents (must exist already)",
+        default='csfr-hackathon-openai-ip-reuse'
     )
     parser.add_argument(
         "--formrecognizerkey",
